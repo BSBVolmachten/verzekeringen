@@ -1,0 +1,6 @@
+fields:
+    name:
+        label: 'Categorie naam'
+        span: left
+        required: 1
+        type: text

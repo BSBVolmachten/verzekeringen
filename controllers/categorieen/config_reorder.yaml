@@ -1,0 +1,5 @@
+title: Categorieen
+modelClass: BsbVolmachten\Verzekeringen\Models\Categorieen
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

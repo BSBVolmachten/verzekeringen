@@ -1,0 +1,5 @@
+title: Zakelijk
+modelClass: BsbVolmachten\Verzekeringen\Models\Zakelijk
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

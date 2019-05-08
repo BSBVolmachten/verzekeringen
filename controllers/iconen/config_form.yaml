@@ -1,0 +1,17 @@
+name: Iconen
+modelClass: BsbVolmachten\Verzekeringen\Models\Iconen
+form: $/bsbvolmachten/verzekeringen/models/iconen/fields.yaml
+defaultRedirect: bsbvolmachten/verzekeringen/iconen
+create:
+    title: 'Icoon Aanmaken'
+    redirect: 'bsbvolmachten/verzekeringen/iconen/update/:id'
+    redirectClose: bsbvolmachten/verzekeringen/iconen
+    flashSave: 'Icoon Opgeslagen'
+update:
+    title: 'Icoon Bewerken'
+    redirect: bsbvolmachten/verzekeringen/iconen
+    redirectClose: bsbvolmachten/verzekeringen/iconen
+    flashSave: 'Icoon Opgeslagen'
+    flashDelete: 'Icoon Verwijderd'
+preview:
+    title: 'Icoon Weergeven'

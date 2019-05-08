@@ -1,0 +1,32 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table bsbvolmachten_verzekeringen_particulier'
+    - builder_table_create_bsbvolmachten_verzekeringen_particulier.php
+1.0.3:
+    - 'Added File Desc'
+    - builder_table_update_bsbvolmachten_verzekeringen_particulier.php
+1.0.4:
+    - 'Added fileswitch'
+    - builder_table_update_bsbvolmachten_verzekeringen_particulier_2.php
+1.0.5:
+    - 'Created table bsbvolmachten_verzekeringen_categorieen'
+    - builder_table_create_bsbvolmachten_verzekeringen_categorieen.php
+1.0.6:
+    - 'Addec at'
+    - builder_table_update_bsbvolmachten_verzekeringen_particulier_3.php
+1.0.7:
+    - 'Drop table bsbvolmachten_verzekeringen_categorieen'
+    - builder_table_delete_bsbvolmachten_verzekeringen_categorieen.php
+1.0.8:
+    - 'Added Homeswitch'
+    - builder_table_update_bsbvolmachten_verzekeringen_particulier_4.php
+1.0.9:
+    - 'Created table bsbvolmachten_verzekeringen_categorieen'
+    - builder_table_create_bsbvolmachten_verzekeringen_categorieen_2.php
+1.0.10:
+    - 'Created table bsbvolmachten_verzekeringen_zakelijk'
+    - builder_table_create_bsbvolmachten_verzekeringen_zakelijk.php
+1.0.11:
+    - 'Created table bsbvolmachten_verzekeringen_iconen'
+    - builder_table_create_bsbvolmachten_verzekeringen_iconen.php

@@ -1,0 +1,9 @@
+columns:
+    name:
+        label: 'Categorie naam'
+        type: text
+        searchable: true
+    sort_order:
+        label: Volgorde
+        type: number
+        sortable: true

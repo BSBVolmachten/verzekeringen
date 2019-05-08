@@ -1,0 +1,17 @@
+name: Particulier
+modelClass: BsbVolmachten\Verzekeringen\Models\Particulier
+form: $/bsbvolmachten/verzekeringen/models/particulier/fields.yaml
+defaultRedirect: bsbvolmachten/verzekeringen/particulier
+create:
+    title: 'Verzekering Aanmaken'
+    redirect: 'bsbvolmachten/verzekeringen/particulier/update/:id'
+    redirectClose: bsbvolmachten/verzekeringen/particulier
+    flashSave: 'Verzekering Opgeslagen'
+update:
+    title: 'Verzekering Bewerken'
+    redirect: bsbvolmachten/verzekeringen/particulier
+    redirectClose: bsbvolmachten/verzekeringen/particulier
+    flashSave: 'Verzekering Opgeslagen'
+    flashDelete: 'Verzekering Verwijderd'
+preview:
+    title: 'Verzekering Weergeven'

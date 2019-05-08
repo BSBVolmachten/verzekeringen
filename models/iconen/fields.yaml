@@ -1,0 +1,13 @@
+fields:
+    name:
+        label: 'Icoon Naam'
+        span: left
+        required: 1
+        type: text
+        commentAbove: 'Geef hier een duidelijke naam aan (Zoals: Auto, Huis, Hond)'
+    slug:
+        label: 'Icoon Code'
+        span: left
+        required: 1
+        type: text
+        commentAbove: 'De code van het icoon, te vinden op (https://fontawesome.com/v4.7.0/cheatsheet/) Zoals: fa-area-chart'

@@ -1,0 +1,15 @@
+title: Iconen
+modelClass: BsbVolmachten\Verzekeringen\Models\Iconen
+list: $/bsbvolmachten/verzekeringen/models/iconen/columns.yaml
+recordUrl: 'bsbvolmachten/verzekeringen/iconen/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: name
+    direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

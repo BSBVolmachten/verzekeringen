@@ -1,0 +1,102 @@
+fields:
+    title:
+        label: Titel
+        span: left
+        required: 1
+        type: text
+        commentAbove: 'Voorbeeld: Autoverzekering'
+    slug:
+        label: Slug
+        span: right
+        required: 1
+        preset:
+            field: title
+            type: slug
+        type: text
+        commentAbove: 'Niet handmatig aanpassen'
+    short_desc:
+        label: 'Korte Omschrijving'
+        size: small
+        span: auto
+        required: 1
+        type: textarea
+    icon:
+        label: Icoon
+        span: left
+        required: 1
+        type: dropdown
+    cat:
+        label: Categorie
+        span: left
+        required: 1
+        type: dropdown
+    homeswitch:
+        label: 'Op Homepagina weergeven'
+        span: left
+        type: switch
+    fullswitch:
+        label: 'Uitgebreide Inhoud'
+        span: left
+        type: switch
+        comment: 'Er wordt dan een nieuwe pagina aangemaakt'
+    image:
+        label: 'Header Afbeelding'
+        mode: image
+        useCaption: 0
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        trigger:
+            action: show
+            field: fullswitch
+            condition: checked
+        type: fileupload
+    text:
+        label: Inhoud
+        size: large
+        span: full
+        trigger:
+            action: show
+            field: fullswitch
+            condition: checked
+        type: richeditor
+    dekking:
+        label: 'Dekking Lijst'
+        size: large
+        span: left
+        trigger:
+            action: show
+            field: fullswitch
+            condition: checked
+        type: richeditor
+        commentAbove: 'Zet de inhoud in een ongeordende lijst'
+    fileswitch:
+        label: 'Bestand Toevoegen'
+        span: left
+        trigger:
+            action: show
+            field: fullswitch
+            condition: checked
+        type: switch
+    file:
+        label: 'Bestand uploaden'
+        mode: file
+        useCaption: 0
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        trigger:
+            action: show
+            field: fileswitch
+            condition: checked
+        type: fileupload
+    file_desc:
+        label: 'Bestand omschrijving'
+        span: left
+        trigger:
+            action: show
+            field: fileswitch
+            condition: checked
+        type: text

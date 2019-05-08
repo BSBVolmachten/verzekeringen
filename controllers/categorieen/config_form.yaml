@@ -1,0 +1,17 @@
+name: Categorieen
+modelClass: BsbVolmachten\Verzekeringen\Models\Categorieen
+form: $/bsbvolmachten/verzekeringen/models/categorieen/fields.yaml
+defaultRedirect: bsbvolmachten/verzekeringen/categorieen
+create:
+    title: 'Categorie Aanmaken'
+    redirect: 'bsbvolmachten/verzekeringen/categorieen/update/:id'
+    redirectClose: bsbvolmachten/verzekeringen/categorieen
+    flashSave: 'Categorie Opgeslagen'
+update:
+    title: 'Categorie Bewerken'
+    redirect: bsbvolmachten/verzekeringen/categorieen
+    redirectClose: bsbvolmachten/verzekeringen/categorieen
+    flashSave: 'Categorie Opgeslagen'
+    flashDelete: 'Categorie Verwijderd'
+preview:
+    title: 'Categorie Bewerken'

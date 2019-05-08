@@ -1,0 +1,17 @@
+name: Zakelijk
+modelClass: BsbVolmachten\Verzekeringen\Models\Zakelijk
+form: $/bsbvolmachten/verzekeringen/models/zakelijk/fields.yaml
+defaultRedirect: bsbvolmachten/verzekeringen/zakelijk
+create:
+    title: 'Zakelijke Verzekering Aanmaken'
+    redirect: 'bsbvolmachten/verzekeringen/zakelijk/update/:id'
+    redirectClose: bsbvolmachten/verzekeringen/zakelijk
+    flashSave: 'Zakelijke Verzekering Opgeslagen'
+update:
+    title: 'Zakelijke Verzekering Bewerken'
+    redirect: bsbvolmachten/verzekeringen/zakelijk
+    redirectClose: bsbvolmachten/verzekeringen/zakelijk
+    flashSave: 'Zakelijke Verzekering Opgeslagen'
+    flashDelete: 'Zakelijke Verzekering Verwijderd'
+preview:
+    title: 'Zakelijke Verzekering Weergeven'

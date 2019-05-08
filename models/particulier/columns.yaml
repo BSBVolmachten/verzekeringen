@@ -1,0 +1,13 @@
+columns:
+    title:
+        label: Titel
+        type: text
+        searchable: true
+    short_desc:
+        label: 'Korte Omschrijving'
+        type: text
+        searchable: true
+    sort_order:
+        label: Volgorde
+        type: number
+        sortable: true

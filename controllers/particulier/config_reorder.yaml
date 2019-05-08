@@ -1,0 +1,5 @@
+title: Particulier
+modelClass: BsbVolmachten\Verzekeringen\Models\Particulier
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

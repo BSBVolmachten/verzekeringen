@@ -1,0 +1,40 @@
+plugin:
+    name: 'bsbvolmachten.verzekeringen::lang.plugin.name'
+    description: 'bsbvolmachten.verzekeringen::lang.plugin.description'
+    author: 'BSB Volmachten'
+    icon: oc-icon-book
+    homepage: ''
+permissions:
+    manage-verzekeringen:
+        tab: 'Verzekeringen Beheren'
+        label: 'Verzekeringen Beheren'
+navigation:
+    main-menu-item:
+        label: Verzekeringen
+        url: bsbvolmachten/verzekeringen/particulier
+        icon: icon-book
+        permissions:
+            - manage-verzekeringen
+        sideMenu:
+            side-menu-item:
+                label: 'Particuliere Verzekeringen'
+                url: bsbvolmachten/verzekeringen/particulier
+                icon: icon-book
+                permissions:
+                    - manage-verzekeringen
+            side-menu-item3:
+                label: 'Zakelijke Verzekeringen'
+                url: bsbvolmachten/verzekeringen/zakelijk
+                icon: icon-building
+            side-menu-item2:
+                label: Categorieen
+                url: bsbvolmachten/verzekeringen/categorieen
+                icon: icon-sitemap
+                permissions:
+                    - manage-verzekeringen
+            side-menu-item4:
+                label: Iconen
+                url: bsbvolmachten/verzekeringen/iconen
+                icon: icon-heart
+                permissions:
+                    - manage-verzekeringen

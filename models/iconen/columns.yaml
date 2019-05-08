@@ -1,0 +1,11 @@
+columns:
+    name:
+        label: Naam
+        type: text
+        searchable: true
+        sortable: true
+    slug:
+        label: Code
+        type: text
+        searchable: true
+        sortable: true
