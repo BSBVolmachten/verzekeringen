@@ -1,4 +1,4 @@
-<?php namespace BsbVolmachten\Verzekeringen\Controllers;
+<?php namespace Bsbvolmachten\Verzekeringen\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;

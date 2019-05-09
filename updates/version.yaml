@@ -30,3 +30,5 @@
 1.0.11:
     - 'Created table bsbvolmachten_verzekeringen_iconen'
     - builder_table_create_bsbvolmachten_verzekeringen_iconen.php
+1.0.12:
+    - 'Changed namespace from BsbVolmachten to Bsbvolmachten'
