@@ -1,4 +1,4 @@
-<?php namespace BsbVolmachten\Verzekeringen;
+<?php namespace Bsbvolmachten\Verzekeringen;
 
 use System\Classes\PluginBase;
 
