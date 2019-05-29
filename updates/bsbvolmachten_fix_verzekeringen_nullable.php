@@ -1,4 +1,4 @@
-<?php namespace BsbVolmachten\Verzekeringen\Updates;
+<?php namespace Bsbvolmachten\Verzekeringen\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
