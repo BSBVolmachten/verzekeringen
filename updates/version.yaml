@@ -39,3 +39,6 @@
 1.0.15:
     - 'sort order fix for categorieen'
     - bsbvolmachten_fix_categorieen_nullabe.php
+1.0.16:
+    - 'sort order fix for verzekeringen'
+    - bsbvolmachten_fix_verzekeringen_nullabe.php
