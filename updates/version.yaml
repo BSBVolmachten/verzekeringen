@@ -34,3 +34,5 @@
     - 'Changed namespace from BsbVolmachten to Bsbvolmachten'
 1.0.13:
     - 'Add category name in columns'
+1.0.14:
+    - 'Fix for sidemenu & set category name required'

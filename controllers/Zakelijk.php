@@ -18,6 +18,6 @@ class Zakelijk extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('BsbVolmachten.Verzekeringen', 'main-menu-item', 'side-menu-item3');
+        BackendMenu::setContext('Bsbvolmachten.Verzekeringen', 'main-menu-item', 'side-menu-item3');
     }
 }

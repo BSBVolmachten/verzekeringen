@@ -17,6 +17,6 @@ class Iconen extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('BsbVolmachten.Verzekeringen', 'main-menu-item', 'side-menu-item4');
+        BackendMenu::setContext('Bsbvolmachten.Verzekeringen', 'main-menu-item', 'side-menu-item4');
     }
 }
