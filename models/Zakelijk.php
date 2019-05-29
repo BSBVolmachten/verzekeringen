@@ -14,6 +14,14 @@ class Zakelijk extends Model
         'image' => 'System\Models\File',
         'file' => 'System\Models\File'
     ];
+
+    public $hasMany = [
+        'category' => [
+            'Bsbvolmachten\verzekeringen\Models\Categorieen',
+            'key'      => 'id',
+            'otherKey' => 'cat'
+        ]
+    ];
     /*
      * Disable timestamps by default.
      * Remove this line if timestamps are defined in the database table.
