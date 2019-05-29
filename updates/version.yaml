@@ -36,3 +36,6 @@
     - 'Add category name in columns'
 1.0.14:
     - 'Fix for sidemenu & set category name required'
+1.0.15:
+    - 'sort order fix for categorieen'
+    - bsbvolmachten_fix_categorieen_nullabe.php
