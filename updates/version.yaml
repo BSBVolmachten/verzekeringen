@@ -32,3 +32,5 @@
     - builder_table_create_bsbvolmachten_verzekeringen_iconen.php
 1.0.12:
     - 'Changed namespace from BsbVolmachten to Bsbvolmachten'
+1.0.13:
+    - 'Add category name in columns'
