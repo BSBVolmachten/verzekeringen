@@ -45,3 +45,5 @@
   - 'Hotfix for sort order'
   - bsbvolmachten_fix_zakelijk_sort_order.php
   - bsbvolmachten_fix_particulier_sort_order.php
+1.1.0:
+    - 'New Release'
