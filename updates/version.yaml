@@ -47,3 +47,6 @@
   - bsbvolmachten_fix_particulier_sort_order.php
 1.1.0:
     - 'New Release'
+1.1.1:
+    - 'Insert standard icons'
+    - seed_icontable.php
