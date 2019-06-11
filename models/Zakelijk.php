@@ -55,7 +55,7 @@ class Zakelijk extends Model
      */
     public $rules = [
         'title' => 'required',
-        'slug' => 'required',
+        'slug' => 'required|unique:bsbvolmachten_verzekeringen_zakelijk,slug',
         'icon' => 'required',
         'short_desc' => 'required',
         'cat' => 'required'

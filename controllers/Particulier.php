@@ -18,6 +18,6 @@ class Particulier extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Bsbvolmachten.Verzekeringen', 'main-menu-item');
+        BackendMenu::setContext('Bsbvolmachten.Verzekeringen', 'main-menu-item', 'side-menu-item');
     }
 }
