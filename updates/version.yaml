@@ -50,3 +50,5 @@
 1.1.1:
     - 'Insert standard icons'
     - seed_icontable.php
+1.2.0:
+    - 'Added component to plugin'
