@@ -53,3 +53,5 @@
     - 'Added component to plugin'
 1.2.1:
     - seed_icontable.php
+1.2.2:
+    - 'Optimised component and added snippets for better version control'

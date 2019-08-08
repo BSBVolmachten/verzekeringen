@@ -1,0 +1,107 @@
+{% if particulier and this.page.id != 'zakelijk' %}
+<div class="product product-layout product-layout-none-heading team-layout style-1">
+    <div class="container">
+        <div class="heading">
+            <h3 class="heading-section">Particuliere Verzekeringen</h3>
+        </div>
+        {% for categorie in categories %}
+        {% set count = 0 %}
+        {% for verzekering in particulier if verzekering.cat == categorie.id %}
+        {% set count = count + 1 %}
+        {% endfor %}
+        {% if count > 0 %}
+        <div class="quote-form-style-1">
+            <div class="heading">
+                <h3 class="heading-section">{{ categorie.name }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            {% for verzekering in particulier if verzekering.cat == categorie.id %}
+            {% if verzekering.fullswitch %}
+            {% set link = 'verzekering-particulier'|page({ slug: verzekering.slug }) %}
+            {% else %}
+            {% set link = '#' %}
+            {% endif %}
+            <div class="col-md-4 col-sm-6">
+                <div class="product-item style-2 match-item">
+                    <div class="icon">
+                        <i class="fa {{ verzekering.icon }}"></i>
+                    </div>
+                    <div class="title">
+                        {% if verzekering.fullswitch %}
+                        <a href="{{ link }}">{{ verzekering.title }}</a>
+                        {% else %}
+                        <span>{{ verzekering.title }}</span>
+                        {% endif %}
+                    </div>
+                    <div class="content">
+                        <p>{{ verzekering.short_desc }}</p>
+                    </div>
+                    {% if verzekering.fullswitch %}
+                    <div class="view-more">
+                        <a href="{{ link }}">Lees meer</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+{% if zakelijk and this.page.id != 'particulier' %}
+<div class="product product-layout product-layout-none-heading team-layout style-1">
+    <div class="container">
+        <div class="heading">
+            <h3 class="heading-section">Zakelijke Verzekeringen</h3>
+        </div>
+        {% for categorie in categories %}
+        {% set count = 0 %}
+        {% for verzekering in zakelijk if verzekering.cat == categorie.id %}
+        {% set count = count + 1 %}
+        {% endfor %}
+        {% if count > 0 %}
+        <div class="quote-form-style-1">
+            <div class="heading">
+                <h3 class="heading-section">{{ categorie.name }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            {% for verzekering in zakelijk if verzekering.cat == categorie.id %}
+            {% if verzekering.fullswitch %}
+            {% set link = 'verzekering-zakelijk'|page({ slug: verzekering.slug }) %}
+            {% else %}
+            {% set link = '#' %}
+            {% endif %}
+            <div class="col-md-4 col-sm-6">
+                <div class="product-item style-2 match-item">
+                    <div class="icon">
+                        <i class="fa {{ verzekering.icon }}"></i>
+                    </div>
+                    <div class="title">
+                        {% if verzekering.fullswitch %}
+                        <a href="{{ link }}">{{ verzekering.title }}</a>
+                        {% else %}
+                        <span>{{ verzekering.title }}</span>
+                        {% endif %}
+                    </div>
+                    <div class="content">
+                        <p>{{ verzekering.short_desc }}</p>
+                    </div>
+                    {% if verzekering.fullswitch %}
+                    <div class="view-more">
+                        <a href="{{ link }}">Lees meer</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

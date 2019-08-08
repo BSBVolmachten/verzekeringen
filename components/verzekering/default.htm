@@ -1,0 +1,156 @@
+{% set slug = insurance.slug %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-push-4">
+            <div class="heading-page heading-normal">
+                <ul class="au-breadcrumb">
+                    <li class="au-breadcrumb-item">
+                        <a href="{{ 'home'|page }}">Home</a>
+                    </li>
+                    <li class="au-breadcrumb-item">
+                        <a href="{{ 'verzekeringen'|page }}">Verzekeringen</a>
+                    </li>
+                    <li class="au-breadcrumb-item">
+                        {% if this.page.id == 'verzekering-particulier' %}
+                        <a href="{{ 'particulier'|page }}">Particulier</a>
+                        {% elseif this.page.id == 'verzekering-zakelijk' %}
+                        <a href="{{ 'zakelijk'|page }}">Zakelijk</a>
+                        {% endif %}
+                    </li>
+                    <li class="au-breadcrumb-item active">
+                        <a href="#">{{ insurance.title }}</a>
+                    </li>
+                </ul>
+            </div>
+            <section class="post-services post-services-detail-1">
+                <div class="title-page">
+                    <h1 class="heading-section bold">{{ insurance.title }}</h1>
+                </div>
+                {% if insurance.image %}
+                <div class="slider slider-medium-layout style-1 style-2">
+                    <div class="slider-item">
+                        <img class="img-responsive" src="{{ insurance.image.thumb(1140,641,{'mode':'crop'}) }}" alt="{{ insurance.title }}" />
+                    </div>
+                </div>
+                {% endif %}
+                <div class="post-paragraph p1">
+                    <div class="post-content">
+                        {{ insurance.text|raw }}
+                    </div>
+                </div>
+                {% if insurance.dekking %}
+                {% set dekking = insurance.dekking|replace({'<ul>': '', '</ul>': '', '</li>': ''}) %}
+                <div class="post-content-box">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                {% for listdekking in dekking|raw|split('<li>') if dekking|trim|length %}
+                                {% if loop.index != 1 and loop.index is even %}
+                                <li>
+                                    <i class="fa fa-check"></i>
+                                    <p>{{ listdekking|raw }}</p>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                {% for listdekking in dekking|raw|split('<li>') if dekking|trim|length %}
+                                {% if loop.index != 1 and loop.index is odd %}
+                                <li>
+                                    <i class="fa fa-check"></i>
+                                    <p>{{ listdekking|raw }}</p>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if insurance.fileswitch == true %}
+                <div class="post-table">
+                    <table class="table table-bordered table-responsive">
+                        <tbody>
+                        <tr>
+                            <td class="tblock" colspan="2">
+                                <div class="tblock-container">
+                                    <span>Bijgevoegd bestand: </span>
+                                    <div class="post-btn">
+                                        <button onclick=" window.open('{{ insurance.file.path }}', '_blank'); return false;" class="au-btn au-btn-blue au-btn-sm">
+                                            <i class="fa fa-file-pdf-o"></i>{{ insurance.file_desc }}</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                {% endif %}
+            </section>
+        </div>
+        <div class="col-md-4 col-md-pull-8">
+            <div class="sidebar sidebar-style-1">
+                <ul class="sidebar-container">
+                    <li class="sidebar-item active">
+                        <a href="#">
+                            <i class="fa {{ insurance.icon }}"></i>
+                            <span>{{ insurance.title }}</span>
+                        </a>
+                    </li>
+                    {% for verzekering in zakelijk if verzekering.slug != slug and verzekering.fullswitch == true %}
+                    <li class="sidebar-item">
+                        <a href="{{ ''|page({ slug: verzekering.slug }) }}">
+                            <i class="fa {{ verzekering.icon }}"></i>
+                            <span>{{ verzekering.title }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                    {% for verzekering in particulier if verzekering.slug != slug and verzekering.fullswitch == true %}
+                    <li class="sidebar-item">
+                        <a href="{{ ''|page({ slug: verzekering.slug }) }}">
+                            <i class="fa {{ verzekering.icon }}"></i>
+                            <span>{{ verzekering.title }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="sidebar sidebar-style-1 sidebar-style-2">
+                    <div class="contact-widget">
+                        <div class="heading-widget">
+                            <h3>Contactgegevens</h3>
+                        </div>
+                        <ul class="contact-list">
+                            {% if this.theme.straat and this.theme.postcode and this.theme.woonplaats %}
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <span>{{ this.theme.straat }}, {{ this.theme.postcode }} {{ this.theme.woonplaats }}</span>
+                            </li>
+                            {% endif %}
+                            {% if this.theme.telefoon %}
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span><a href="tel:{{ this.theme.telefoon }}">{{ this.theme.telefoon }}</a></span>
+                            </li>
+                            {% endif %}
+                            {% if this.theme.fax %}
+                            <li>
+                                <i class="fa fa-fax"></i>
+                                <span>{{ this.theme.fax }}</span>
+                            </li>
+                            {% endif %}
+                            {% if this.theme.email %}
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <span><a href="mailto:{{ html_email(this.theme.email) }}">{{ html_email(this.theme.email) }}</a></span>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
