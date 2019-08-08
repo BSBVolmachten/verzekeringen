@@ -28,48 +28,40 @@ class Verzekeringen extends ComponentBase {
         ];
     }
 
-    public function categorieen()
-    {
-        $categorieen = Categorieen::orderBy('sort_order', 'ASC')->get();
-        if ($categorieen->isEmpty()) {
-            return false;
-        } else {
-            return $categorieen;
-        }
+    public function onRun() {
+        $categories = $this->getCategorieen();
+        $zakelijk = $this->getZakelijk();
+        $particulier = $this->getParticulier();
+
+        ($categories->isEmpty()) ? $this->page['categories'] = false : $this->page['categories'] = $categories;
+        ($zakelijk->isEmpty()) ? $this->page['zakelijk'] = false : $this->page['zakelijk'] = $zakelijk;
+        ($particulier->isEmpty()) ? $this->page['particulier'] = false : $this->page['particulier'] = $particulier;
     }
-    public function particulier()
+
+    public function getCategorieen()
+    {
+        return Categorieen::orderBy('sort_order', 'ASC')->get();
+    }
+
+    public function getParticulier()
     {
         if ($this->property('homeSwitch')) {
             $particulier = Particulier::orderBy('sort_order', 'ASC')->where('homeswitch', true)->get();
-        } elseif ($this->page->id == 'verzekering-particulier') {
-            $slug = $this->param('slug');
-            $particulier = Particulier::where('slug', '!=' , $slug)->where('fullswitch', true)->get();
         } else {
             $particulier = Particulier::orderBy('sort_order', 'ASC')->get();
         }
 
-        if ($particulier->isEmpty()) {
-            return false;
-        } else {
-            return $particulier;
-        }
+        return $particulier;
     }
 
-    public function zakelijk()
+    public function getZakelijk()
     {
         if ($this->property('homeSwitch')) {
             $zakelijk = Zakelijk::orderBy('sort_order', 'ASC')->where('homeswitch', true)->get();
-        } elseif ($this->page->id == 'verzekering-zakelijk') {
-            $slug = $this->param('slug');
-            $zakelijk = Zakelijk::where('slug', '!=' , $slug)->where('fullswitch', true)->get();
         } else {
             $zakelijk = Zakelijk::orderBy('sort_order', 'ASC')->get();
         }
 
-        if ($zakelijk->isEmpty()) {
-            return false;
-        } else {
-            return $zakelijk;
-        }
+        return $zakelijk;
     }
 }
